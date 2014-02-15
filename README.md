@@ -88,4 +88,4 @@ A field which handle a box with a call to action ( title + button )
 </div>
 ```
 
-examples here: http://www.andreapaciolla.it/
+examples here: http://www.andreapaciolla.it/static/stravemail
