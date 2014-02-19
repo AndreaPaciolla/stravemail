@@ -145,7 +145,7 @@ p {
   margin: 0 auto; }
 
 .title_box .title_logo {
-  height: 27px;
+  width: 27px;
   float: left; }
 .title_box .title {
   color: #467daa;
