@@ -89,3 +89,5 @@ A field which handle a box with a call to action ( title + button )
 ```
 
 examples here: http://www.andreapaciolla.it/static/stravemail
+
+optimized following http://emailclientmarketshare.com/
