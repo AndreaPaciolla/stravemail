@@ -110,7 +110,8 @@ p {
   background-color: #e7f2f7; }
 
 .footer_wrapper {
-  background-color: white; }
+  background-color: white;
+  border-top: 1px solid #F5F5F5; }
 
 .container, .content {
   max-width: 670px;
@@ -128,8 +129,7 @@ p {
 .footer {
   background-color: white;
   color: dimgrey;
-  font-size: 12px;
-  border-top: 1px solid whitesmoke; }
+  font-size: 12px; }
   .footer p {
     color: dimgrey; }
 
@@ -142,10 +142,13 @@ p {
 .logo {
   text-align: center;
   width: 130px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  max-width: 130px; }
+  .logo img {
+    width: 100%; }
 
 .title_box .title_logo {
-  width: 27px;
+  height: 27px;
   float: left; }
 .title_box .title {
   color: #467daa;
