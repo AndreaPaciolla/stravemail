@@ -16,19 +16,24 @@ $header_background: 		#457ca9;
 $head_wrapper_background: 	#457ca9;
 $footer_wrapper_background: white;
 $footer_background: 		white;
-$title_color: 				#467DAA;
 $generic_link_color: 		#457ca9;
 
 // ==== FONT COLOR
 $footer_color: 	#696969;
 $header_color: 	white;
 $body_color: 	black;
+$blue_title: 	#457CA9;
+$title_color: 	#467DAA;
+$brown:			#675C57;
 
 // ==== FONT SIZE
-$body_font_size: 	14px;
-$footer_font_size: 	12px;
-$title_font_size: 	27px;
-$smallest_font_size:11px;
+$body_font_size: 		14px;
+$footer_font_size: 		12px;
+$title_font_size: 		27px;
+$h4_font_size: 			18px;
+$h5_font_size: 			15px;
+$smallest_font_size:	11px;
+$price_font_size: 		21px;
 
 $text_line_height: 1.6;
 	
@@ -52,8 +57,25 @@ p {
 	line-height: $text_line_height;
 }
 
+h4 { 
+	color: $blue_title; 
+	font-size: $h4_font_size 
+}
+
+h5 { 
+	color: $brown;
+	font-size: $h5_font_size;
+	font-weight: normal;
+}
+
+.hr {
+	height: 1px;
+	width: 90%;
+	border-top: 1px solid whitesmoke;
+}
+
 /* ==== HELPER CLASSES */
-.exp_width {
+.exp_width, .full_width {
 	width: 100%;
 }
 
@@ -63,6 +85,10 @@ p {
 
 .no_padding {
 	padding: 0;
+}
+
+.no_margin {
+	margin: 0 !important;
 }
 
 @each $p in $positions {
@@ -115,6 +141,18 @@ p {
 
 .vbottomspace {
 	@extend .double_margin_bottom;
+}
+
+.no_text_decoration {
+	text-decoration: none!important;
+}
+
+.full_width {
+	width: 100%;
+}
+
+.width_90 {
+	width: 90%!important;
 }
 
 @mixin border-radius($value) {
@@ -284,25 +322,6 @@ p {
 		text-transform: uppercase;
 	}
 
-	.button {
-		@extend .padding_bottom;
-		@extend .padding_top;
-		@include border-radius(3px);
-
-		margin: 1em auto 0 auto;
-		font-weight: bold;
-		text-align: center;
-		width: 150px;
-		color: white;
-		text-decoration: none;
-
-		&.blue {
-			color: white;
-			background-color: #4671B8;
-		}
-
-	}
-
 }
 
 
@@ -328,12 +347,24 @@ p {
 
 			line-height: $text_line_height;
 			
+			&.no_padding { @extend .no_padding }
+
 		}
 
 	}
 	
 	&:after { clear: both; }
 
+	.product_price {
+		color: $brown;
+		font-size: $price_font_size;
+		font-weight: bold;
+
+		&.fix_position {
+			position: relative;
+			top: -5px;
+		}
+	}
 
 }
 
@@ -369,3 +400,28 @@ p {
 	margin: 0 auto;
 }
 
+
+// ===== BUTTONS' STYLE
+.button {
+	@extend .padding_bottom;
+	@extend .padding_top;
+	@include border-radius(3px);
+
+	margin: 1em auto 0 auto;
+	font-weight: bold;
+	text-align: center;
+	width: 150px;
+	color: white;
+	text-decoration: none;
+
+	&.blue {
+		color: white;
+		background-color: #4671B8;
+	}
+
+	&.orange {
+		color: white;
+		background-color: #EB8838;
+	}
+
+}

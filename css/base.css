@@ -11,20 +11,37 @@ a {
 p {
   line-height: 1.6; }
 
+h4 {
+  color: #457ca9;
+  font-size: 18px; }
+
+h5 {
+  color: #675c57;
+  font-size: 15px;
+  font-weight: normal; }
+
+.hr {
+  height: 1px;
+  width: 90%;
+  border-top: 1px solid whitesmoke; }
+
 /* ==== HELPER CLASSES */
-.exp_width, .head_wrapper, .body_wrapper, .footer_wrapper {
+.exp_width, .head_wrapper, .body_wrapper, .footer_wrapper, .full_width {
   width: 100%; }
 
 .padded, .cta_title_button_box {
   padding: 1em; }
 
-.no_padding, .title_box .title {
+.no_padding, .title_box .title, .nested_boxes .box p.no_padding {
   padding: 0; }
+
+.no_margin {
+  margin: 0 !important; }
 
 .half_padding_top {
   padding-top: 0.5em; }
 
-.padding_top, .cta_title_button_box .button, .nested_boxes .box p {
+.padding_top, .nested_boxes .box p, .button {
   padding-top: 1em; }
 
 .double_padding_top {
@@ -60,7 +77,7 @@ p {
 .half_padding_bottom {
   padding-bottom: 0.5em; }
 
-.padding_bottom, .cta_title_button_box .button {
+.padding_bottom, .button {
   padding-bottom: 1em; }
 
 .double_padding_bottom {
@@ -92,6 +109,15 @@ p {
 
 .double_margin_left {
   margin-left: 2em; }
+
+.no_text_decoration {
+  text-decoration: none !important; }
+
+.full_width {
+  width: 100%; }
+
+.width_90 {
+  width: 90% !important; }
 
 .clean {
   clear: both; }
@@ -193,21 +219,6 @@ p {
     font-size: 18px;
     text-align: center;
     text-transform: uppercase; }
-  .cta_title_button_box .button {
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -khtml-border-radius: 3px;
-    -o-border-radius: 3px;
-    margin: 1em auto 0 auto;
-    font-weight: bold;
-    text-align: center;
-    width: 150px;
-    color: white;
-    text-decoration: none; }
-    .cta_title_button_box .button.blue {
-      color: white;
-      background-color: #4671B8; }
 
 .nested_boxes.two .box {
   width: 260px; }
@@ -225,6 +236,13 @@ p {
     line-height: 1.6; }
 .nested_boxes:after {
   clear: both; }
+.nested_boxes .product_price {
+  color: #675c57;
+  font-size: 21px;
+  font-weight: bold; }
+  .nested_boxes .product_price.fix_position {
+    position: relative;
+    top: -5px; }
 
 .socialbar {
   width: 100%;
@@ -248,3 +266,22 @@ p {
   text-align: center;
   width: 100%;
   margin: 0 auto; }
+
+.button {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  -o-border-radius: 3px;
+  margin: 1em auto 0 auto;
+  font-weight: bold;
+  text-align: center;
+  width: 150px;
+  color: white;
+  text-decoration: none; }
+  .button.blue {
+    color: white;
+    background-color: #4671B8; }
+  .button.orange {
+    color: white;
+    background-color: #EB8838; }
