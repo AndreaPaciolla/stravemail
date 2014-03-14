@@ -46,6 +46,9 @@ $heart_hand_up: "/ocDl5t8wbc5Ohp24xVVOnmlj0weosSAhEdjFmB0TE_-c9IqWaxCjMJ-V9Wmxsz
 	margin: 0;
 	font-family: arial, sans-serif;
 	font-size: 100%;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
 a {
@@ -159,6 +162,10 @@ h5 {
 	width: 90%!important;
 }
 
+.text_align_center {
+	text-align: center;
+}
+
 @mixin border-radius($value) {
 	border-radius: $value;
 	-moz-border-radius: $value;
@@ -169,6 +176,10 @@ h5 {
 
 .clean {
 	clear: both;
+}
+
+.background_color_inherit {
+	background-color: inherit!important;
 }
 
 // this is a bit ugly
@@ -227,11 +238,25 @@ h5 {
 	font-size: $body_font_size;
 }
 
+.body_expanded {
+	@extend .full_width;
+	max-width: $container_width;
+	margin: 0 auto;
+	background-color: $content_background;
+	font-size: $body_font_size;
+}
+
 .logo {
 	text-align: center;
 	width: $logo_width;
 	margin: 0 auto;
 	max-width: $logo_width;
+
+	&.width_inc {
+		width: $logo_width + 50px;
+		max-width: $logo_width + 50px;
+	}
+
 	img { width: 100% }
 }
 
@@ -269,6 +294,9 @@ h5 {
 .text_box {
 	
 	max-width: 520px; 
+	&.full_width {
+		max-width: 100%;
+	}
 
 	p {
 		line-height: $text_line_height;
@@ -282,6 +310,10 @@ h5 {
 		text-align: center;
 		max-width: $content_width;
 		width: 100%;
+		&.full_width {
+			width: 100%;
+			max-width: 100%;
+		}
 	}
 }
 
@@ -333,14 +365,15 @@ h5 {
 .nested_boxes {
 
 	&.two { .box { width: $content_width / 2 } }
-	&.three { .box { width: $content_width / 3 } }
+	&.three { .box { width: floor($content_width / 3) - 13px } }
 
 	.box {
 		float: left; 
 		// only with three cols
 		.thumb {
 			width: 170px;
-			height: 152px;
+			padding-right: 13px;
+			//height: 152px;
 			overflow: hidden;
 			img { width: 100% }
 		}
@@ -426,6 +459,11 @@ h5 {
 	&.orange {
 		color: white;
 		background-color: #EB8838;
+	}
+
+	&.bigger {
+		font-size: 22px;
+		padding: 0.75em 1em;					
 	}
 
 }

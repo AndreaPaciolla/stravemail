@@ -2,7 +2,13 @@
   padding: 0;
   margin: 0;
   font-family: arial, sans-serif;
-  font-size: 100%; }
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */ }
 
 a {
   text-decoration: underline;
@@ -26,7 +32,7 @@ h5 {
   border-top: 1px solid whitesmoke; }
 
 /* ==== HELPER CLASSES */
-.exp_width, .head_wrapper, .body_wrapper, .footer_wrapper, .full_width {
+.exp_width, .head_wrapper, .body_wrapper, .footer_wrapper, .full_width, .body_expanded {
   width: 100%; }
 
 .padded, .cta_title_button_box {
@@ -116,14 +122,20 @@ h5 {
 .color_white {
   color: white !important; }
 
-.full_width {
+.full_width, .body_expanded {
   width: 100%; }
 
 .width_90 {
   width: 90% !important; }
 
+.text_align_center {
+  text-align: center; }
+
 .clean {
   clear: both; }
+
+.background_color_inherit {
+  background-color: inherit !important; }
 
 .small_text {
   font-size: 11px; }
@@ -168,11 +180,20 @@ h5 {
   background-color: white;
   font-size: 14px; }
 
+.body_expanded {
+  max-width: 670px;
+  margin: 0 auto;
+  background-color: white;
+  font-size: 14px; }
+
 .logo {
   text-align: center;
   width: 130px;
   margin: 0 auto;
   max-width: 130px; }
+  .logo.width_inc {
+    width: 180px;
+    max-width: 180px; }
   .logo img {
     width: 100%; }
 
@@ -188,6 +209,8 @@ h5 {
 
 .text_box {
   max-width: 520px; }
+  .text_box.full_width, .text_box.body_expanded {
+    max-width: 100%; }
   .text_box p {
     line-height: 1.6; }
 
@@ -195,6 +218,9 @@ h5 {
   text-align: center;
   max-width: 520px;
   width: 100%; }
+  .image_box img.full_width, .image_box img.body_expanded {
+    width: 100%;
+    max-width: 100%; }
 
 .text_image_box .thumb {
   width: 170px;
@@ -226,12 +252,12 @@ h5 {
 .nested_boxes.two .box {
   width: 260px; }
 .nested_boxes.three .box {
-  width: 173.33333px; }
+  width: 160px; }
 .nested_boxes .box {
   float: left; }
   .nested_boxes .box .thumb {
     width: 170px;
-    height: 152px;
+    padding-right: 13px;
     overflow: hidden; }
     .nested_boxes .box .thumb img {
       width: 100%; }
@@ -288,3 +314,6 @@ h5 {
   .button.orange {
     color: white;
     background-color: #EB8838; }
+  .button.bigger {
+    font-size: 22px;
+    padding: 0.75em 1em; }
