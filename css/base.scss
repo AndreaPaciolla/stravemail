@@ -46,9 +46,6 @@ $heart_hand_up: "/ocDl5t8wbc5Ohp24xVVOnmlj0weosSAhEdjFmB0TE_-c9IqWaxCjMJ-V9Wmxsz
 	margin: 0;
 	font-family: arial, sans-serif;
 	font-size: 100%;
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-	box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
 a {
@@ -216,6 +213,7 @@ h5 {
 
 .content {
 	background-color: $wrapper_background;
+	overflow: hidden; // DUE TO THE BEHAVIOUR OF PADDING > THE p TAGS SPAN OVER THE MAXIMUM WIDTH ALLOWED
 }
 
 .header {
