@@ -3,7 +3,7 @@ $positions: (top, right, bottom, left);
 
 // ==== WIDTH
 $container_width: 	670px;
-$content_width: 	520px; //670px - 520px
+$content_width: 	670px; //670px - 520px
 $tolerance: 		60px;
 $text-tolerance: 	30px;
 
@@ -361,6 +361,8 @@ h5 {
 
 // ==== THE TEXT BOX 
 .text_box {
+	width: $content_width - $text-tolerance;
+	max-width: $content_width - $text-tolerance; 
 	
 	&.full_width {
 		max-width: 100%;
@@ -374,7 +376,8 @@ h5 {
 
 // ===== IMAGE BOX
 .image_box {
-
+	width: $content_width - $text-tolerance;
+	max-width: $content_width - $text-tolerance;
 	&.inc_width {
 		@extend .full_width;
 		max-width: 100%;
@@ -394,6 +397,8 @@ h5 {
 
 // ==== IMAGE WITH TEXT BOX 
 .text_image_box {
+	max-width: $content_width - $text-tolerance;
+	width: $content_width - $text-tolerance;
 
 	.thumb {
 
@@ -420,7 +425,8 @@ h5 {
 .cta_title_button_box {
 	@extend .padded;
 
-	
+	width: $content_width - $tolerance;
+	max-width: $content_width - $tolerance;
 	background-color: #FFF7A0;
 	border: 1px solid #D6B651;
 
