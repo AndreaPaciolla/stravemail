@@ -2,16 +2,16 @@
 $positions: (top, right, bottom, left);
 
 // ==== WIDTH
-$container_width: 	670px;
+$container_width: 	700px;
 $content_width: 	670px; //670px - 520px
 $tolerance: 		60px;
-$text-tolerance: 	30px;
+$text_tolerance: 	30px;
 
 $logo_width: 		130px;
 $logo_wider: 		180px;
 
-$thumb_width_default: 	170px;
-$thumb_height_default: 	170px;
+$thumb_width_default: 	190px;
+$thumb_height_default: 	190px;
 
 // ==== BACKGROUND COLOR
 $content_background: 		white;
@@ -81,7 +81,7 @@ h5 {
 
 /* ==== HELPER CLASSES */
 .exp_width, .full_width {
-	width: 100%;
+	width: 100%!important;
 }
 
 .padded {
@@ -297,22 +297,37 @@ h5 {
 	@extend .double_margin_bottom;
 }
 
+.simple_category {
+	position: relative;
+	font-size: $category_font_size;
+	font-weight: 600;
+	color: #467DAA;
+	margin: 0;
+	padding: 10px 24px 10px 24px;
+	cursor: pointer;
+
+	a { text-decoration: none; padding: 10px 24px 10px 24px; }
+}
+
 .header_secondary {
 	background-color: white;
 	border-bottom: 1px solid #F5F5F5;
-	@extend .padding;
+	@extend .full_width;
+	max-width: 100%;
 
 	.category {	
 		@extend .text_align_center;
+		width: 25%;
+		@extend .float_left;
 
-		width: $content_width / 3; 	
+		//width: $content_width / 3;
 		position: relative;
 		font-size: $category_font_size;
 		font-weight: 600;
 		color: #467DAA;
 		margin: 0;
 		padding: 10px 24px 10px 24px;
-		height: 35px;
+		//height: 35px;
 		border-right: 1px solid #F5F5F5;
 		border-left: 1px solid #F5F5F5;
 		cursor: pointer;
@@ -361,8 +376,7 @@ h5 {
 
 // ==== THE TEXT BOX 
 .text_box {
-	width: $content_width - $text-tolerance;
-	max-width: $content_width - $text-tolerance; 
+
 	
 	&.full_width {
 		max-width: 100%;
@@ -376,8 +390,7 @@ h5 {
 
 // ===== IMAGE BOX
 .image_box {
-	width: $content_width - $text-tolerance;
-	max-width: $content_width - $text-tolerance;
+
 	&.inc_width {
 		@extend .full_width;
 		max-width: 100%;
@@ -397,8 +410,6 @@ h5 {
 
 // ==== IMAGE WITH TEXT BOX 
 .text_image_box {
-	max-width: $content_width - $text-tolerance;
-	width: $content_width - $text-tolerance;
 
 	.thumb {
 
@@ -425,8 +436,6 @@ h5 {
 .cta_title_button_box {
 	@extend .padded;
 
-	width: $content_width - $tolerance;
-	max-width: $content_width - $tolerance;
 	background-color: #FFF7A0;
 	border: 1px solid #D6B651;
 
@@ -549,6 +558,6 @@ h5 {
 
 }
 
-.box {
-	width: $content_width - $text_tolerance;
-}
+// .box {
+// 	width: $content_width - $text_tolerance;
+// }
